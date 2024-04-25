@@ -4,11 +4,22 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
-
-.logo__title {
-  @media (min-width: 1440px) {
-    width: 118px;
-    height: 21px;
-  }
-}
+@import "./blocks/logo.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main-content.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/button.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/description.scss";
+@import "./blocks/example.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/map.scss";
+@import "./blocks/information.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/show-more.scss";
+@import "./blocks/other-goods.scss";
+@import "./blocks/subscribe.scss";
