@@ -1,0 +1,13 @@
+.map__text {
+  @include font($basic-font, 14px, 20px, $font-special-black);
+  text-transform: uppercase;
+}
+
+.map__adress {
+  line-height: 20px;
+}
+
+.map__coordinates {
+  text-decoration: none;
+  color: $font-special-dark-grey;
+}

@@ -1,0 +1,7 @@
+.button {
+  @include font($basic-font, 16px, 20px, $font-basic-white);
+  background-color: $bg-basic-green;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+}

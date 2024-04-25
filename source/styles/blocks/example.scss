@@ -1,0 +1,22 @@
+.example__wrapper {
+  background-color: $bg-secondary-grey;
+}
+
+.example__information-list {
+  list-style: none;
+}
+
+.example__information-value {
+  @include font($basic-font, 24px, 24px, $font-basic-black);
+  text-transform: uppercase;
+}
+
+.example__information-label {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__cost {
+  @include font($basic-font, 14px, 20px, $font-basic-black);
+  text-transform: uppercase;
+}
