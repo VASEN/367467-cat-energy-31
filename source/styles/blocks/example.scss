@@ -7,7 +7,7 @@
 }
 
 .example__information-value {
-  @include font($basic-font, 24px, 24px, $font-basic-black);
+  @include font($font-size: 24px, $line-height: 24px);
   text-transform: uppercase;
 }
 
@@ -17,6 +17,6 @@
 }
 
 .example__cost {
-  @include font($basic-font, 14px, 20px, $font-basic-black);
+  @include font($font-size: 14px, $line-height: 20px);
   text-transform: uppercase;
 }

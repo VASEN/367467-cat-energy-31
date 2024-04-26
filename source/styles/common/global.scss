@@ -6,7 +6,7 @@
 }
 
 body {
-  @include font($special-font, 14px, 18px);
+  @include font($font-family: $special-font, $font-size: 14px, $line-height: 18px, $font-color: $font-special-dark-grey);
   background-color: $bg-basic-white;
 }
 

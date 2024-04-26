@@ -1,5 +1,5 @@
 .hero {
-  @include font($basic-font, 14px, 14px, $font-basic-white);
+  @include font($font-size: 14px, $line-height: 14px, $font-color: $font-basic-white);
   background-color: $bg-basic-green;
 }
 

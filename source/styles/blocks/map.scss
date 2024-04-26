@@ -1,5 +1,5 @@
 .map__text {
-  @include font($basic-font, 14px, 20px, $font-special-black);
+  @include font($font-size: 14px, $line-height: 20px, $font-color: $font-special-black);
   text-transform: uppercase;
 }
 
