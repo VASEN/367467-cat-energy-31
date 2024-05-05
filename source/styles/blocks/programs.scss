@@ -9,10 +9,87 @@
 .programs__title {
   @include font($font-size: 24px, $line-height: 37px);
   text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    @include block-size (50px);
+
+    background-color: $bg-basic-green;
+    background-position: center;
+    border-radius: 50%;
+
+    @include tablet {
+      @include block-size (200px);
+    }
+
+    @include desktop {
+      @include block-size (100px);
+    }
+  }
+}
+
+.programs__title--slim {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (36px, 50px);
+    @include left-position (50px, 36px);
+
+    background-image: url("../../icons/stack.svg#program-slim");
+
+    @include tablet {
+      @include block-size (140px, 194px);
+      @include left-position (200px, 140px);
+      top: -10px;
+    }
+
+    @include desktop {
+      @include block-size (70px, 97px);
+      @include left-position (100px, 70px);
+      top: -5px;
+    }
+  }
+}
+
+.programs__title--pro {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (67px, 28px);
+    @include left-position (50px, 67px);
+    background-image: url("../../icons/stack.svg#program-pro");
+
+    @include tablet {
+      @include block-size (268px, 112px);
+      @include left-position (200px, 268px);
+    }
+
+    @include desktop {
+      @include block-size (134px, 56px);
+      @include left-position (100px, 134px);
+    }
+  }
 }
 
 .programs__button {
+  display: flex;
+  align-items: center;
+
   background-color: transparent;
   line-height: 16px;
   color: $font-basic-black;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../../icons/stack.svg#program-arrow");
+  }
 }

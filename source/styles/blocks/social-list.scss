@@ -1,3 +1,21 @@
 .social-list {
   list-style: none;
 }
+
+.social-list__link {
+  display: block;
+
+  @include block-size (28px, 22px);
+
+  &--vk {
+    background-image: url("../../icons/stack.svg#icon-social-vk");
+  }
+
+  &--youtube {
+    background-image: url("../../icons/stack.svg#icon-social-youtube");
+  }
+
+  &--telegram {
+    background-image: url("../../icons/stack.svg#icon-social-telegram");
+  }
+}

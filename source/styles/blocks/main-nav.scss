@@ -2,6 +2,24 @@
   @include font($font-size: 20px, $line-height: 20px);
 }
 
+.main-nav__toggle {
+  @include block-size (24px);
+
+  background-image: url("../../icons/stack.svg#menu-open");
+  background-color: transparent;
+  background-position: center;
+  border: none;
+
+  &--active {
+    @include block-size (18px, 18px);
+    background-image: url("../../icons/stack.svg#menu-close");
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
 .main-nav__list {
   list-style: none;
 }

@@ -1,5 +1,16 @@
 .information__copyright {
+  display: flex;
+  align-items: center;
+
   line-height: 20px;
   text-decoration: none;
   color: $font-special-dark-grey;
+
+  &::after {
+    content: "";
+
+    @include block-size (27px, 34px);
+
+    background-image: url("../../icons/stack.svg#icon-htmlacademy");
+  }
 }

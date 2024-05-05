@@ -1,6 +1,5 @@
 .logo__title {
-  @media (min-width: 1440px) {
-    width: 118px;
-    height: 21px;
+  @include desktop {
+    @include block-size (118px, 21px);
   }
 }

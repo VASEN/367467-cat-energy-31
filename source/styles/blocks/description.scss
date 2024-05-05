@@ -1,3 +1,85 @@
 .description__list {
   list-style: none;
 }
+
+.description__text {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    @include block-size (60px);
+
+    background-color: $bg-basic-green;
+
+    @include tablet {
+      @include block-size (80px);
+    }
+  }
+}
+
+.description__text--leaf {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (30px, 32px);
+    @include left-position (60px, 30px);
+
+    background-image: url("../../icons/stack.svg#icon-leaf");
+
+    @include tablet {
+      @include left-position (80px, 30px);
+    }
+  }
+}
+
+.description__text--powder {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (26px, 28px);
+    @include left-position (60px, 26px);
+
+    background-image: url("../../icons/stack.svg#icon-powder");
+
+    @include tablet {
+      @include left-position (80px, 26px);
+    }
+  }
+}
+
+.description__text--meal {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (25px, 30px);
+    @include left-position (60px, 25px);
+
+    background-image: url("../../icons/stack.svg#icon-meal");
+
+    @include tablet {
+      @include left-position (80px, 25px);
+    }
+  }
+}
+
+.description__text--clock {
+  &::after {
+    content: "";
+    position: absolute;
+
+    @include block-size (26px, 31px);
+    @include left-position (60px, 26px);
+
+    background-image: url("../../icons/stack.svg#icon-clock");
+
+    @include tablet {
+      @include left-position (80px, 26px);
+    }
+  }
+}
