@@ -1,6 +1,21 @@
 .show-more__title {
+  display: flex;
+  flex-direction: column;
+
   @include font($font-size: 16px, $line-height: 20px, $font-color: $font-special-black);
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+
+    @include block-size (30px);
+
+    background-image: url("../../icons/stack.svg#icon-show-more");
+
+    @include tablet {
+      @include block-size (60px);
+    }
+  }
 }
 
 .show-more__text {
