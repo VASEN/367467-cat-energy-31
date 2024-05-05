@@ -1,0 +1,7 @@
+.card {
+  @include font($font-family: $special-font, $font-size: 12px, $line-height: 16px, $font-color: $font-special-dark-grey);
+}
+
+.card__title {
+  @include font($font-size: 16px, $line-height: 20px, $font-color: $font-special-light-black);
+}

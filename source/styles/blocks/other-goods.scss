@@ -1,0 +1,27 @@
+.other-goods__title {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.other-goods__list {
+  list-style: none;
+}
+
+.other-goods {
+  & .card__options {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  & .card__title {
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.other-goods__promo {
+  background-color: $bg-basic-green;
+  font-size: 14px;
+  line-height: 18px;
+  color: $font-basic-white;
+}

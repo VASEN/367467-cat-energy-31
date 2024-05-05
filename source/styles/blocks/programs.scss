@@ -1,0 +1,18 @@
+.programs__wrapper {
+  background-color: $bg-basic-grey;
+}
+
+.programs__list {
+  list-style: none;
+}
+
+.programs__title {
+  @include font($font-size: 24px, $line-height: 37px);
+  text-transform: uppercase;
+}
+
+.programs__button {
+  background-color: transparent;
+  line-height: 16px;
+  color: $font-basic-black;
+}

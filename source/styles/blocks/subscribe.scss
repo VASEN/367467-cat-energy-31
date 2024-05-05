@@ -1,0 +1,15 @@
+.subscribe__title {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.subscribe__text {
+  @include font($font-size: 16px, $line-height: 24px);
+}
+
+.subscribe__email {
+  &::placeholder {
+    @include font($font-size: 20px, $line-height: 30px, $font-color: $font-special-dark-grey);
+    text-transform: uppercase;
+  }
+}

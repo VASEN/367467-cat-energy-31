@@ -1,0 +1,13 @@
+.main-nav {
+  @include font($font-size: 20px, $line-height: 20px);
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $font-basic-black;
+}
