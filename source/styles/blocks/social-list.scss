@@ -7,15 +7,30 @@
 
   @include block-size (28px, 22px);
 
+  &:hover {
+    background-color: $bg-basic-green;
+  }
+
+  &:focus {
+    background-color: $bg-basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--vk {
-    background-image: url("../../icons/stack.svg#icon-social-vk");
+    mask-image: url("../../icons/stack.svg#icon-social-vk");
+    background-color: $icon-color;
   }
 
   &--youtube {
-    background-image: url("../../icons/stack.svg#icon-social-youtube");
+    mask-image: url("../../icons/stack.svg#icon-social-youtube");
+    background-color: $icon-color;
   }
 
   &--telegram {
-    background-image: url("../../icons/stack.svg#icon-social-telegram");
+    mask-image: url("../../icons/stack.svg#icon-social-telegram");
+    background-color: $icon-color;
   }
 }

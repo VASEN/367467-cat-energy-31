@@ -85,6 +85,10 @@
   line-height: 16px;
   color: $font-basic-black;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
     width: 24px;

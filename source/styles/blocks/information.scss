@@ -6,11 +6,28 @@
   text-decoration: none;
   color: $font-special-dark-grey;
 
+  &:hover {
+    &::after {
+      background-color: $bg-basic-green;
+    }
+  }
+
+  &:focus {
+    &::after {
+      background-color: $bg-basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     content: "";
 
     @include block-size (27px, 34px);
 
-    background-image: url("../../icons/stack.svg#icon-htmlacademy");
+    mask-image: url("../../icons/stack.svg#icon-htmlacademy");
+    background-color: $icon-color;
   }
 }
