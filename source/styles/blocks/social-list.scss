@@ -1,3 +1,36 @@
 .social-list {
   list-style: none;
 }
+
+.social-list__link {
+  display: block;
+
+  @include block-size (28px, 22px);
+
+  &:hover {
+    background-color: $bg-basic-green;
+  }
+
+  &:focus {
+    background-color: $bg-basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vk {
+    mask-image: url("../../icons/stack.svg#icon-social-vk");
+    background-color: $icon-color;
+  }
+
+  &--youtube {
+    mask-image: url("../../icons/stack.svg#icon-social-youtube");
+    background-color: $icon-color;
+  }
+
+  &--telegram {
+    mask-image: url("../../icons/stack.svg#icon-social-telegram");
+    background-color: $icon-color;
+  }
+}

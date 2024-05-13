@@ -15,3 +15,24 @@
   font-weight: $font-weight;
   color: $font-color;
 }
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin block-size ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin left-position ($block-width, $icon-width) {
+  left: calc(($block-width - $icon-width) / 2);
+}

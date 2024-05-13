@@ -1,5 +1,33 @@
 .information__copyright {
+  display: flex;
+  align-items: center;
+
   line-height: 20px;
   text-decoration: none;
   color: $font-special-dark-grey;
+
+  &:hover {
+    &::after {
+      background-color: $bg-basic-green;
+    }
+  }
+
+  &:focus {
+    &::after {
+      background-color: $bg-basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    @include block-size (27px, 34px);
+
+    mask-image: url("../../icons/stack.svg#icon-htmlacademy");
+    background-color: $icon-color;
+  }
 }

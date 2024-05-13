@@ -25,3 +25,16 @@
   line-height: 18px;
   color: $font-basic-white;
 }
+
+.other-goods__text {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+
+    @include block-size (78px, 80px);
+
+    background-image: url("../../icons/stack.svg#icon_promo");
+  }
+}
