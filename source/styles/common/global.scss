@@ -6,12 +6,22 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+
   @include font($font-family: $special-font, $font-size: 14px, $line-height: 18px, $font-color: $font-special-dark-grey);
   background-color: $bg-basic-white;
 }
 
 img {
   display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .visually-hidden {
