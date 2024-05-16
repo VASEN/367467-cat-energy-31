@@ -1,9 +1,112 @@
 .hero {
+  position: relative;
+
   @include font($font-size: 14px, $line-height: 14px, $font-color: $font-basic-white);
-  background-color: $bg-basic-green;
+
+  @include desktop {
+    position: static;
+  }
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 302px;
+
+  background-image: url("../../images/hero-bg-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px $bg-basic-green-85;
+
+  z-index: -1;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    // top: -100px;
+    right: 0;
+    display: block;
+    width: 50%;
+    min-height: 694px;
+
+    background-image: url("../../images/hero-bg-desktop@1x.png");
+    background-size: cover;
+
+    z-index: -1;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 20px 0;
+
+  // background-color: $bg-basic-green-85;
+
+  @include tablet {
+    position: relative;
+    padding: 0 30px;
+
+    background-color: transparent;
+  }
+
+  @include desktop {
+    align-items: flex-start;
+    min-height: 580px;
+    padding: 0 55px;
+  }
 }
 
 .hero__title {
+  margin: 0;
+
   font-size: 36px;
   line-height: 36px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+
+    color: $font-basic-black;
+  }
+}
+
+.hero__text {
+  @include tablet {
+    color: $font-basic-black;
+  }
+}
+
+.hero__button {
+  order: 4;
+
+  display: block;
+  width: 100%;
+
+  text-align: center;
+
+  @include tablet {
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 200px);
+    width: auto;
+    padding: 14px 26px;
+  }
+
+  @include desktop {
+    position: static;
+  }
+}
+
+.hero__image {
+  @include desktop {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 500px);
+  }
 }
