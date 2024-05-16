@@ -1,45 +1,83 @@
 .programs__wrapper {
-  background-color: $bg-basic-grey;
-}
+  padding: 0 20px;
 
-.programs__list {
-  list-style: none;
-}
+  @include tablet {
+    padding: 0 30px;
+  }
 
-.programs__title {
-  @include font($font-size: 24px, $line-height: 37px);
-  text-transform: uppercase;
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: "";
-
-    @include block-size (50px);
-
-    background-color: $bg-basic-green;
-    background-position: center;
-    border-radius: 50%;
-
-    @include tablet {
-      @include block-size (200px);
-    }
-
-    @include desktop {
-      @include block-size (100px);
-    }
+  @include desktop {
+    padding: 0 55px;
   }
 }
 
-.programs__title--slim {
-  &::after {
+.programs__list {
+  display: grid;
+  row-gap: 20px;
+  list-style: none;
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: unset;
+  }
+}
+
+.programs__item {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 22px 20px;
+  padding: 20px;
+
+  background-color: $bg-basic-grey;
+
+  @include tablet {
+    grid-template-areas:
+      "title  logo"
+      "text   logo"
+      "button logo";
+    grid-template-columns: 1fr 200px;
+    gap: unset;
+    column-gap: 55px;
+    padding: 75px 65px 55px 50px;
+  }
+
+  @include desktop {
+    grid-template-areas: unset;
+    grid-template-columns: min-content auto;
+    column-gap: 60px;
+
+    padding: 45px 50px 55px;
+  }
+}
+
+.programs__title-logo {
+  position: relative;
+
+  @include block-size (50px);
+  background-color: $bg-basic-green;
+  background-position: center;
+  border-radius: 50%;
+
+  @include tablet {
+    grid-area: logo;
+
+    @include block-size (200px);
+  }
+
+  @include desktop {
+    grid-area: unset;
+
+    @include block-size (100px);
+  }
+}
+
+.programs__title-logo--slim {
+  &::before {
     content: "";
     position: absolute;
 
     @include block-size (36px, 50px);
     @include left-position (50px, 36px);
-
     background-image: url("../../icons/stack.svg#program-slim");
 
     @include tablet {
@@ -56,32 +94,74 @@
   }
 }
 
-.programs__title--pro {
-  &::after {
+.programs__title-logo--pro {
+  &::before {
     content: "";
     position: absolute;
 
     @include block-size (67px, 28px);
     @include left-position (50px, 67px);
+    @include top-position (50px, 28px);
     background-image: url("../../icons/stack.svg#program-pro");
 
     @include tablet {
       @include block-size (268px, 112px);
       @include left-position (200px, 268px);
+      @include top-position (200px, 112px);
     }
 
     @include desktop {
       @include block-size (134px, 56px);
       @include left-position (100px, 134px);
+      @include top-position (100px, 56px);
     }
   }
 }
 
-.programs__button {
+.programs__title {
+  position: relative;
   display: flex;
   align-items: center;
+  margin: 0;
+
+  @include font($font-size: 24px, $line-height: 37px);
+  text-transform: uppercase;
+
+  @include tablet {
+    grid-area: title;
+
+    @include font ($font-size: 36px, $line-height: 36px);
+  }
+
+  @include desktop {
+    grid-area: unset;
+  }
+}
+
+.programs__text {
+  grid-column: 1/-1;
+  margin: 0;
+
+  @include tablet {
+    grid-area: text;
+    grid-column: unset;
+  }
+
+  @include desktop {
+    grid-area: unset;
+    grid-column: 1/-1;
+  }
+}
+
+.programs__button {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
 
   background-color: transparent;
+  border-top: 1px solid $border-grey;
+
   line-height: 16px;
   color: $font-basic-black;
 
@@ -93,7 +173,20 @@
     content: "";
     width: 24px;
     height: 12px;
+    margin-left: 15px;
 
     background-image: url("../../icons/stack.svg#program-arrow");
+  }
+
+  @include tablet {
+    grid-area: button;
+    grid-column: unset;
+
+    border: none;
+  }
+
+  @include desktop {
+    grid-area: unset;
+    grid-column: 1/-1;
   }
 }
