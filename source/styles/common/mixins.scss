@@ -16,6 +16,11 @@
   color: $font-color;
 }
 
+@mixin new-font ($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;

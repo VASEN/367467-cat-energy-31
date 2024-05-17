@@ -26,7 +26,6 @@
   }
 
   @include desktop {
-    // top: -100px;
     right: 0;
     display: block;
     width: 50%;
@@ -46,8 +45,6 @@
 
   padding: 25px 20px 0;
 
-  // background-color: $bg-basic-green-85;
-
   @include tablet {
     position: relative;
     padding: 0 30px;
@@ -65,12 +62,10 @@
 .hero__title {
   margin: 0;
 
-  font-size: 36px;
-  line-height: 36px;
+  @include new-font (36px, 36px);
 
   @include tablet {
-    font-size: 60px;
-    line-height: 60px;
+    @include new-font (60px, 60px);
 
     color: $font-basic-black;
   }

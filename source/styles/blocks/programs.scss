@@ -130,7 +130,7 @@
   @include tablet {
     grid-area: title;
 
-    @include font ($font-size: 36px, $line-height: 36px);
+    @include new-font (36px, 36px);
   }
 
   @include desktop {
