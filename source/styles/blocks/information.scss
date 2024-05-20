@@ -1,3 +1,29 @@
+.information__wrapper {
+  padding: 0 20px;
+
+  background-color: $bg-basic-grey;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.information__section {
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $border-grey;
+
+    @include tablet {
+      border: none;
+    }
+  }
+}
+
+.information__social-list {
+  display: flex;
+  justify-content: center;
+}
+
 .information__copyright {
   display: flex;
   align-items: center;
