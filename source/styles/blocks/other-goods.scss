@@ -7,7 +7,7 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     padding: 0 55px;
   }
@@ -19,6 +19,8 @@
 
 .other-goods__list {
   display: grid;
+  grid-column: 1/-2;
+
   list-style: none;
 }
 
@@ -51,7 +53,6 @@
 
 .other-goods__promo {
   min-height: 290px;
-  // background-color: $bg-basic-green;
   background-image: url("../../images/promo-bg-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -67,7 +68,6 @@
 
   @include tablet {
     min-height: 200px;
-    // background: unset;
     background-image: url("../../images/promo-bg-tablet@1x.png");
 
     @media (min-resolution: 2dppx) {
