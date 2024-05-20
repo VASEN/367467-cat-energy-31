@@ -16,6 +16,11 @@
   color: $font-color;
 }
 
+@mixin new-font ($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
@@ -35,4 +40,8 @@
 
 @mixin left-position ($block-width, $icon-width) {
   left: calc(($block-width - $icon-width) / 2);
+}
+
+@mixin top-position ($block-height, $icon-height) {
+  top: calc(($block-height - $icon-height) / 2);
 }

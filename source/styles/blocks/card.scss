@@ -1,7 +1,25 @@
 .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   @include font($font-family: $special-font, $font-size: 12px, $line-height: 16px, $font-color: $font-special-dark-grey);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    padding: 0 35px;
+
+    background: linear-gradient($bg-basic-white 20%, $bg-basic-grey 20%);
+  }
+}
+
+.card__image {
+  margin: 0 auto;
 }
 
 .card__title {
   @include font($font-size: 16px, $line-height: 20px, $font-color: $font-special-light-black);
+}
+
+.card__button {
+  grid-column: 1/-1;
 }

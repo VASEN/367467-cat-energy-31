@@ -2,17 +2,35 @@
   @include font($font-size: 20px, $line-height: 20px);
 }
 
-.main-nav__toggle {
-  @include block-size (24px);
+.main-nav__logo-image {
+  margin-right: auto;
+}
 
-  background-image: url("../../icons/stack.svg#menu-open");
-  background-color: transparent;
-  background-position: center;
-  border: none;
+.main-nav__logo-title {
+  margin: 0 auto;
+
+  @include desktop {
+    @include block-size (118px, 21px);
+  }
+}
+
+.main-nav__toggle {
+  display: block;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
 
   &--active {
     @include block-size (18px, 18px);
+
     background-image: url("../../icons/stack.svg#menu-close");
+    background-color: transparent;
+    background-position: center;
+    border: none;
+  }
+
+  &--active + .main-nav__list {
+    display: block;
   }
 
   @include tablet {
@@ -21,11 +39,39 @@
 }
 
 .main-nav__list {
-  list-style: none;
+  display: none;
+  grid-column: 1/-1;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-column: unset;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+
+  &--inner-page .main-nav__link {
+    @include desktop {
+      color: $font-basic-black;
+    }
+  }
+}
+
+.main-nav__item {
+  text-align: center;
 }
 
 .main-nav__link {
   text-transform: uppercase;
   text-decoration: none;
   color: $font-basic-black;
+
+  @include tablet {
+    @include new-font (18px, 24px);
+  }
+
+  @include desktop {
+    line-height: 30px;
+    color: $font-basic-white;
+  }
 }

@@ -1,3 +1,17 @@
+.subscribe__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 70px;
+  }
+
+  @include desktop {
+    padding: 0 55px;
+  }
+}
+
 .subscribe__title {
   font-size: 24px;
   line-height: 24px;
@@ -7,7 +21,19 @@
   @include font($font-size: 16px, $line-height: 24px);
 }
 
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
 .subscribe__email {
+  width: 100%;
+
   &::placeholder {
     @include font($font-size: 20px, $line-height: 30px, $font-color: $font-special-dark-grey);
     text-transform: uppercase;

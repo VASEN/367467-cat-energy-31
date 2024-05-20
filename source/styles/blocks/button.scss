@@ -5,3 +5,12 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+.toggle {
+  @include block-size (24px);
+
+  background-image: url("../../icons/stack.svg#menu-open");
+  background-color: transparent;
+  background-position: center;
+  border: none;
+}

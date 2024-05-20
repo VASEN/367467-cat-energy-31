@@ -1,16 +1,48 @@
+.other-goods__wrapper {
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    padding: 0 55px;
+  }
+}
+
 .other-goods__title {
-  font-size: 24px;
-  line-height: 24px;
+  @include new-font (24px, 24px);
 }
 
 .other-goods__list {
+  display: grid;
+  grid-column: 1/-2;
+
   list-style: none;
+}
+
+.other-goods__card {
+  grid-template-columns: 1fr;
+
+  background: unset;
+  background-color: $bg-basic-white;
+
+  @include desktop {
+    display: flex;
+    padding: 0;
+  }
 }
 
 .other-goods {
   & .card__options {
-    font-size: 14px;
-    line-height: 14px;
+    @include new-font (14px, 14px);
+
+    @include desktop {
+      display: flex;
+    }
   }
 
   & .card__title {
@@ -20,15 +52,48 @@
 }
 
 .other-goods__promo {
-  background-color: $bg-basic-green;
-  font-size: 14px;
-  line-height: 18px;
+  min-height: 290px;
+  background-image: url("../../images/promo-bg-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px $bg-basic-green-85;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/promo-bg-mobile@2x.png");
+  }
+
+  @include new-font (14px, 18px);
   color: $font-basic-white;
+
+  @include tablet {
+    min-height: 200px;
+    background-image: url("../../images/promo-bg-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/promo-bg-tablet@2x.png");
+    }
+  }
+
+  @include desktop {
+    min-height: 288px;
+
+    background-image: url("../../images/promo-bg-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/promo-bg-desktop@2x.png");
+    }
+  }
 }
 
 .other-goods__text {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  padding: 0 60px;
+
+  text-align: center;
 
   &::before {
     content: "";
@@ -36,5 +101,10 @@
     @include block-size (78px, 80px);
 
     background-image: url("../../icons/stack.svg#icon_promo");
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
