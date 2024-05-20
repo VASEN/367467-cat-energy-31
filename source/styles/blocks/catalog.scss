@@ -1,3 +1,23 @@
+.catalog__wrapper {
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+}
+
 .catalog__list {
+  display: grid;
+
   list-style: none;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 80px;
+  }
 }

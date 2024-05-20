@@ -49,6 +49,12 @@
     flex-wrap: wrap;
     margin-right: 0;
   }
+
+  &--inner-page .main-nav__link {
+    @include desktop {
+      color: $font-basic-black;
+    }
+  }
 }
 
 .main-nav__item {
