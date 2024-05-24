@@ -12,26 +12,26 @@
   <link rel="mask-icon" href="favicons/safari-pinned-tab.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
+  <!-- <script src="scripts/index.js" defer></script> -->
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header wrapper main-header__wrapper">
     <nav class="main-header__nav main-nav">
       <a class="main-nav__logo" href="#">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1320px)" srcset="images/logo-image-desktop.svg" width="70" height="59">
           <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-image-tablet.svg" width="60" height="50">
-          <img class="main-nav__logo-image" src="images/logo-image-mobile.svg" width="33" height="36" alt="Логотип интернет-магазина здорового питания для котов">
+          <img class="main-nav__logo-image" src="images/logo-image-mobile.svg" width="33" height="38" alt="Логотип интернет-магазина здорового питания для котов">
         </picture>
       </a>
       <a class="main-nav__logo" href="#">
         <img class="main-nav__logo-title" src="images/logo-text.svg" width="101" height="18" alt="Интернет-магазина здорового питания для котов">
       </a>
-      <button class="main-nav__toggle toggle" type="button">
+      <button class="main-nav__toggle toggle main-nav__toggle--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
         </li>
@@ -185,6 +185,7 @@
       </div>
     </section>
   </footer>
+  <script src="scripts/index.js" defer></script>
 </body>
 
 </html>

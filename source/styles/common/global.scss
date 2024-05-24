@@ -41,3 +41,15 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.wrapper {
+  padding: $padding-mobile;
+
+  @include tablet {
+    padding: $padding-tablet;
+  }
+
+  @include desktop {
+    padding: $padding-desktop;
+  }
+}
