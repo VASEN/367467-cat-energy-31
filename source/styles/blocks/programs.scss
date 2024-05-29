@@ -1,4 +1,10 @@
 .programs__wrapper {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
   @include desktop {
     margin-bottom: 71px;
   }
