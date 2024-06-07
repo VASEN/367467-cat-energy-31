@@ -1,13 +1,26 @@
 .slider {
   position: relative;
-  padding: 0 20px;
+  width: 280px;
+  margin: 0 auto;
 
   @include tablet {
     padding: 0 30px;
   }
 }
 
+.slider__image {
+  width: 140px;
+  object-fit: cover;
+}
+
+.slider__image--before {
+  left: 0;
+  object-position: 0;
+}
+
 .slider__image--after {
   position: absolute;
   top: 0;
+  right: 0;
+  object-position: 100%;
 }
