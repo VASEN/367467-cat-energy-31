@@ -1,12 +1,12 @@
 .programs__wrapper {
-  padding: 0 20px;
+  margin-bottom: 20px;
 
   @include tablet {
-    padding: 0 30px;
+    margin-bottom: 45px;
   }
 
   @include desktop {
-    padding: 0 55px;
+    margin-bottom: 71px;
   }
 }
 
@@ -31,13 +31,13 @@
   background-color: $bg-basic-grey;
 
   @include tablet {
+    min-height: 372px;
     grid-template-areas:
       "title  logo"
       "text   logo"
       "button logo";
     grid-template-columns: 1fr 200px;
-    gap: unset;
-    column-gap: 55px;
+    gap: 24px 55px;
     padding: 75px 65px 55px 50px;
   }
 
@@ -60,6 +60,7 @@
 
   @include tablet {
     grid-area: logo;
+    align-self: center;
 
     @include block-size (200px);
   }

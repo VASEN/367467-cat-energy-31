@@ -1,12 +1,26 @@
 .description__wrapper {
-  padding: 0 20px;
+  margin-bottom: 50px;
 
   @include tablet {
-    padding: 0 30px;
+    margin-bottom: 0;
+    padding-bottom: 45px;
+
+    border-bottom: 1px solid $border-secondary-grey;
   }
 
   @include desktop {
-    padding: 0 55px;
+    margin-bottom: 69px;
+    padding-bottom: 0;
+
+    border: none;
+  }
+}
+
+.description__title {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 32px;
   }
 }
 
@@ -19,6 +33,7 @@
     grid-template-rows: 280px;
     grid-auto-rows: 280px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    row-gap: 37px;
   }
 
   @include desktop {
@@ -48,7 +63,6 @@
   @include tablet {
     position: relative;
     width: 250px;
-    // min-height: 280px;
   }
 }
 
@@ -72,14 +86,17 @@
     background-repeat: no-repeat;
 
     @include tablet {
+      margin-top: 40px;
+      margin-bottom: 30px;
+
       @include block-size (80px);
     }
   }
 
   @include tablet {
     display: block;
-    // flex-direction: column;
-    // align-items: flex-start;
+
+    @include new-font (16px, 24px);
   }
 }
 

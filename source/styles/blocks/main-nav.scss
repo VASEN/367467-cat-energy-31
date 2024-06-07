@@ -3,13 +3,17 @@
 }
 
 .main-nav__logo-image {
-  margin-right: auto;
+  @include tablet {
+    margin-right: 13px;
+  }
 }
 
 .main-nav__logo-title {
   margin: 0 auto;
 
   @include desktop {
+    margin: 0;
+
     @include block-size (118px, 21px);
   }
 }
@@ -18,19 +22,19 @@
   display: block;
   margin: 0;
   margin-left: auto;
-  padding: 0;
 
-  &--active {
+  &--closed {
+    background-image: url("../../icons/stack.svg#menu-open");
+  }
+
+  &--opened {
     @include block-size (18px, 18px);
 
     background-image: url("../../icons/stack.svg#menu-close");
-    background-color: transparent;
-    background-position: center;
-    border: none;
   }
 
-  &--active + .main-nav__list {
-    display: block;
+  &:has(+ .main-nav__list--no-js) {
+    display: none;
   }
 
   @include tablet {
@@ -39,15 +43,46 @@
 }
 
 .main-nav__list {
-  display: none;
   grid-column: 1/-1;
-  margin: 0 auto;
+  display: grid;
+  grid-auto-rows: 65px;
+  align-items: center;
+  padding: 0 20px;
+
+  &--closed {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: flex-end;
+      padding: 0;
+    }
+  }
+
+  &--opened {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    left: 0;
+
+    background-color: $bg-basic-white;
+    z-index: 2;
+  }
+
+  &--no-js {
+    display: grid;
+    position: static;
+    padding: 0;
+  }
 
   @include tablet {
     grid-column: unset;
     display: flex;
     flex-wrap: wrap;
-    margin-right: 0;
+    margin-right: 4px;
   }
 
   &--inner-page .main-nav__link {
@@ -59,6 +94,12 @@
 
 .main-nav__item {
   text-align: center;
+
+  &:not(:last-of-type) {
+    @include tablet {
+      margin-right: 34px;
+    }
+  }
 }
 
 .main-nav__link {
@@ -66,7 +107,21 @@
   text-decoration: none;
   color: $font-basic-black;
 
+  cursor: pointer;
+
+  &--current {
+    @include tablet {
+      border-bottom: 2px solid $bg-basic-green;
+    }
+
+    @include desktop {
+      border-bottom: 2px solid $bg-basic-white;
+    }
+  }
+
   @include tablet {
+    padding-bottom: 8px;
+
     @include new-font (18px, 24px);
   }
 
